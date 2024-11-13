@@ -1,9 +1,8 @@
-import { Chat } from "@/Chat/Chat";
-import { ChatIntro } from "@/Chat/ChatIntro";
+import { Tasks } from "@/Tasks/Tasks";
+import { Authenticated, Unauthenticated, useQuery } from "convex/react";
 import { Layout } from "@/Layout";
 import { SignInForm } from "@/SignInForm";
-import { UserMenu } from "@/components/UserMenu";
-import { Authenticated, Unauthenticated, useQuery } from "convex/react";
+import { UserMenu } from "@/components/UserMenu.tsx";
 import { api } from "../convex/_generated/api";
 
 export default function App() {
@@ -16,15 +15,12 @@ export default function App() {
         </Authenticated>
       }
     >
-      <>
-        <Authenticated>
-          <ChatIntro />
-          <Chat viewer={(user ?? {})._id!} />
-        </Authenticated>
-        <Unauthenticated>
-          <SignInForm />
-        </Unauthenticated>
-      </>
+      <Authenticated>
+        <Tasks />
+      </Authenticated>
+      <Unauthenticated>
+        <SignInForm />
+      </Unauthenticated>
     </Layout>
   );
 }
