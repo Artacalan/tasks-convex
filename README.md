@@ -1,4 +1,6 @@
-# Welcome to your Convex + React (Vite) + Convex Auth app
+# Task convex
+
+[Notion de mon analyse de la doc](https://www.notion.so/Projet-serverless-tasks-1371c75bc20e80298818eea0bcc46902)
 
 This is a [Convex](https://convex.dev/) project created with [`npm create convex`](https://www.npmjs.com/package/create-convex).
 
